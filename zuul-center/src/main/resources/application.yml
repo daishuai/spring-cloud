@@ -1,0 +1,25 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: zuul-center
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka # 注册中心注册地址
+  instance:
+    instance-id: zuul-center-8004
+
+zuul:
+  routes:
+    server-dept:
+      path: /dept/**
+      # url: http://localhost:8002
+      service-id: server-dept
+      strip-prefix: false
+    server-user:
+      path: /user/**
+      service-id: server-user
+      # url: http://localhost:8003
+      strip-prefix: false

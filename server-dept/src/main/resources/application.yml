@@ -1,0 +1,14 @@
+server:
+  port: 8002
+  servlet:
+    context-path: /dept
+
+spring:
+  application:
+    name: server-dept
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka # 注册中心注册地址
+  instance:
+    instance-id: server-dept-8002

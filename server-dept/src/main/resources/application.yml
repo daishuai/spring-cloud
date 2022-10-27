@@ -1,5 +1,5 @@
 server:
-  port: 8002
+  port: 8080
   servlet:
     context-path: /dept
 
@@ -11,4 +11,4 @@ eureka:
     service-url:
       defaultZone: http://localhost:8001/eureka # 注册中心注册地址
   instance:
-    instance-id: server-dept-8002
+    instance-id: server-dept-8080
